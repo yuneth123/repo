@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to OceanLegacy</title>
+    <link rel="icon" href="icon.png" type="image/png">
+    <link rel="stylesheet" href="profile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--Navigation Bar-->
+    <div class="nav">
+        <a href="home.html"><img src="web_logo.png" alt="OceanLegacy logo"></a>
+        <ul class="navbar">
+            <li><a href="home.html" class="navlinks">Home</a></li>
+            <li><a href="shop.html" class="navlinks">Shop</a></li>
+            <li><a href="feedback.html" class="navlinks">Feedback</a></li>
+            <li><a href="ourteam" class="navlinks">Our Team</a></li>
+            <li><a href="user.html" class="navlinks">User Profile</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <div id="step-info"></div>
+        <div id="prompt-container"></div>
+        <div class="progress-bar">
+            <div class="progress-bar-fill" id="progress-bar-fill"></div>
+            <div class="progress-bar-text" id="progress-bar-text">0%</div>
+        </div>
+        <div class="profile-output" id="profile-output" style="display: none;"></div>
+        <button id="next-button">Next</button>
+        <button id="skip-button">Skip</button>
+        <button id="prev-button">Previous</button>
+        <button id="reset-button">Reset</button>
+    </div>
+
+
+    <!--Back to top-->
+    <div class="to_top">
+        <a href="#top"><img src="to_top.png" alt="Back to top"></a>
+    </div>
+
+    <!--Footer-->
+    <div class="footer">
+        <p>&copy; Designed by <a href="#"> Yuneth samarasinghe</a>. All Rights Reserved.</p>
+
+        <div class="developer">
+            <p>Developed by <a href="#">Yuneth Samarasinghe</a></p>
+        </div>
+    </div>
+    
+    <script src="profile.js"></script>
+    <script src="navhide.js"></script>
+    <script src="activehighlight.js"></script>
+
+</body>
+</html>

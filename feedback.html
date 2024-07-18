@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="icon" href="icon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation Bar-->
+    <div class="nav">
+        <a href="home.html"><img src="web_logo.png" alt="OceanLegacy logo"></a>
+        <ul class="navbar">
+            <li><a href="home.html" class="navlinks">Home</a></li>
+            <li><a href="shop.html" class="navlinks">Shop</a></li>
+            <li><a href="feedback.html" class="navlinks">Feedback</a></li>
+            <li><a href="team.html" class="navlinks">Our Team</a></li>
+            <li><a href="profile.html" class="navlinks">User Profile</a></li>
+        </ul>
+    </div>
+
+    <!-- Background -->
+    <div class="background">
+        <img src="feedback_back.jpg" alt="background">
+    </div>
+
+    <!-- Feedback Form Body -->
+    <div class="feedback-form active" id="feedback-form">
+        <h2 id="feed_title">Feedback Form</h2>
+        <p>Required *</p>
+
+        <form id="form" action="send_email.php" method="post">
+
+            <label for="name">* Enter your name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">* Enter your email:</label>
+            <input type="email" pattern="[^ @]+@[^ @]+\.[a-zA-Z]{2,}" id="email" name="email" required title="Please enter a valid email address. Example: name@example.com">
+
+            <label>Was this your first time visiting?</label>
+            <div class="radio-group">
+                <label><input type="radio" name="first_time" value="Yes"> Yes</label>
+                <label><input type="radio" name="first_time" value="No"> No</label>
+            </div>
+
+            <label>Was this website informative and easy to navigate through?</label>
+            <div class="radio-group">
+                <label><input type="radio" name="informative" value="Yes"> Yes</label>
+                <label><input type="radio" name="informative" value="No"> No</label>
+            </div>
+
+            <label for="improvements">If "No", suggest any improvements for the future:</label>
+            <textarea id="improvements" name="improvements"></textarea>
+
+            <label>How satisfied are you with our services? Choose from 0 to 10, with 1 being "Not satisfied at all!" and 10 being "Extremely satisfied!":</label>
+            <div class="rating">
+                <input type="radio" id="rating-1" name="rating" value="1"><label for="rating-1">1</label>
+                <input type="radio" id="rating-2" name="rating" value="2"><label for="rating-2">2</label>
+                <input type="radio" id="rating-3" name="rating" value="3"><label for="rating-3">3</label>
+                <input type="radio" id="rating-4" name="rating" value="4"><label for="rating-4">4</label>
+                <input type="radio" id="rating-5" name="rating" value="5"><label for="rating-5">5</label>
+                <input type="radio" id="rating-6" name="rating" value="6"><label for="rating-6">6</label>
+                <input type="radio" id="rating-7" name="rating" value="7"><label for="rating-7">7</label>
+                <input type="radio" id="rating-8" name="rating" value="8"><label for="rating-8">8</label>
+                <input type="radio" id="rating-9" name="rating" value="9"><label for="rating-9">9</label>
+                <input type="radio" id="rating-10" name="rating" value="10"><label for="rating-10">10</label>
+            </div>
+
+            <label>Would you recommend our services?</label>
+            <div class="radio-group">
+                <label><input type="radio" name="recommend" value="Yes"> Yes</label>
+                <label><input type="radio" name="recommend" value="No"> No</label>
+            </div>
+
+            <label for="updates">Would you like to receive updates about the website and any offers?</label>
+            <select id="updates" name="updates">
+                <option value="yes-email">Yes - via Email</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="additional-requests">Do you have any additional questions or requests?</label>
+            <textarea id="additional-requests" name="additional_requests"></textarea>
+
+            <div class="feed_buttons">
+                <button type="button" id="feed" onclick="previewForm()">Submit</button>
+                <button type="reset" id="reset_button">Reset</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="preview-section" id="preview-section">
+        <h2>Preview Your Responses</h2>
+        <p><strong>Name : </strong> <span id="preview-name"></span></p>
+        <p><strong>Email : </strong> <span id="preview-email"></span></p>
+        <p><strong>First time visiting : </strong> <span id="preview-first-time"></span></p>
+        <p><strong>Informative and easy to navigate : </strong> <span id="preview-informative"></span></p>
+        <p><strong>Improvements : </strong> <span id="preview-improvements"></span></p>
+        <p><strong>Satisfaction rating : </strong> <span id="preview-rating"></span></p>
+        <p><strong>Recommend services : </strong> <span id="preview-recommend"></span></p>
+        <p><strong>Receive updates : </strong> <span id="preview-updates"></span></p>
+        <p><strong>Additional requests : </strong> <span id="preview-additional-requests"></span></p>
+        <div class="feed_buttons">
+            <button type="button" onclick="editForm()">Edit</button>
+            <button type="button" onclick="submitForm()">Confirm</button>
+        </div>
+    </div>
+
+    <div class="success-section" id="success-section">
+        <h2>Thank You for Your Feedback!</h2>
+        <p>Your form has been submitted successfully.</p>
+        <img src="success.gif" alt="success">
+        <p>We appreciate your feedback and will get in touch with you if necessary.</p>
+        <button type="button" id="return_button" onclick="window.location.href='home.html'">Back to Homepage</button>
+    </div>
+
+    <!--Footer-->
+    <div class="footer">
+        <p>&copy; Designed by <a href="student02.html" target="_blank">Daneesha Hansaka</a>. All Rights Reserved.</p>
+
+        <div class="developer">
+            <p>Developed by <a href="student02.html" target="_blank">Daneesha Hansaka</a></p>
+        </div>
+    </div>
+
+    <script src="navhide.js"></script>
+    <script src="activehighlight.js"></script>
+    <script src="preview_edit.js"></script>
+
+</body>
+</html>
+    

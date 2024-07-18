@@ -1,0 +1,274 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Navigation bar */
+.nav {
+    position: fixed;
+    overflow: hidden;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 90px; 
+    background: linear-gradient(45deg, #05396a,#0361b8, #0361b8, #01234d);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    z-index: 1000;
+}
+
+/* Logo */
+.nav img {
+    width: 250px; 
+    height: 250px; 
+    margin-left: -35px;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    font-family: "Encode Sans", sans-serif;
+    font-size: 20px; 
+    font-weight: 400;
+    color: #FFFFFF; 
+}
+
+/* Navigation Bar - Items */
+.navbar li {
+    margin: 0 20px;
+    cursor: pointer; 
+    white-space: nowrap; 
+}
+
+/* Navigation Bar - Links */
+.navbar li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+/* Navigation Bar when Hover */
+.navbar li a:hover {
+    color: #4ff9ee;
+    border: 1px solid #4ff9ee;
+    border-radius: 10px;
+}
+
+/* Navigation Bar when Current-Active Page */
+.navbar li a.active {
+    color: #4ff9ee;
+    font-weight: 560;
+    border-bottom-style: solid;
+
+}
+
+/* Button Style */
+.home_buttons {
+    width: 185px; 
+    height: 52px; 
+    position: relative; 
+    padding: 0 20px; 
+    font-family: "Encode Sans", sans-serif; 
+    font-size: 18px; 
+    line-height: 28px; 
+    font-weight: 400; 
+    color: #FFFFFF; /* White */
+    background: #17a7f0; /* Background color */
+    border: none; 
+    border-radius: 22px; 
+    cursor: pointer;
+    z-index: 3;
+}
+
+.home_buttons:hover {
+    background: #01042f;
+    transform: scale(1.15);
+}
+
+/*back to top button*/
+.to_top{
+    position: fixed;
+    bottom:40px;
+    left: 20px;
+    z-index: 100;
+}
+.to_top img{
+    width: 40px;
+}
+
+/* Developer */
+.developer {
+    position: fixed;
+    width: 300px;
+    height: 30px;
+    right: 30px;
+    bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Encode Sans", sans-serif;
+    font-size: 14px;
+    color: #FFFFFF;
+    border-width: 2px;
+    border-color: #ffffff;
+    border-radius: 15px;
+    border-style: solid;
+    background: rgb(6, 72, 138);
+}
+
+.developer a{
+    color: #4ff9ee;
+}
+
+/* Footer */
+.footer {
+    position: fixed;
+    overflow: hidden;
+    background: linear-gradient(45deg, #032d55,#045bac,#032d55);
+    bottom: 0px;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    font-family: "Encode Sans", sans-serif;
+    font-size: 14px; 
+    line-height: 20px; 
+    font-weight: 300; 
+    color: #FFFFFF;
+    z-index: 1000;
+}
+
+.footer a{
+    color: #9ff3fe;
+    font-weight: 500;
+}
+
+/*-------- User Profile Styles ------------ */
+
+body {
+    font-family: "Encode Sans", sans-serif;
+    background-image: url(userback.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.personal-info {
+    color: white;
+}
+
+.container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background: linear-gradient(to bottom, #20b1c7 , #6c14d0 );
+    margin-top: 20%;
+}
+
+.prompt {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: white;
+}
+
+.progress-bar {
+    position: relative;
+    width: 60%;
+    height: 20px;
+    background: #f3f3f3;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-left: 20%;
+}
+
+.progress-bar-fill {
+    width: 0;
+    height: 20px;
+    background-color: blue ;  
+    transition: width 0.3s ease-in-out;
+}
+
+.progress-bar-text {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 0;
+    left: 0;
+    color: rgb(29, 26, 26);
+    font-weight: bold;
+}
+
+#next-button,
+#reset-button,
+#skip-button,
+#prev-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0f23a4;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#next-button:hover,
+#reset-button:hover,
+#skip-button:hover,
+#prev-button:hover {
+    background-color: #02184b;
+}
+
+#reset-button {
+    margin-left: 10px;
+    background-color: #d9534f;
+    padding: 10px;
+}
+
+#reset-button:hover {
+    background-color: #c9302c;
+}
+
+#skip-button {
+    margin-left: 10px;
+    background-color: #f0ad4e;
+}
+
+#skip-button:hover {
+    background-color: #ec971f;
+}
+
+#prev-button {
+    margin-left: 10px;
+    background-color: #5bc0de;
+}
+
+#prev-button:hover {
+    background-color: #15728f;
+}
+
+#step-info {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.error {
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    margin-top: 10px;
+}
